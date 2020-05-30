@@ -7,6 +7,7 @@ import plotly.express as px
 st.title('Sentiment analysis of US airlines by tweets')
 #streamlit supports markdown formatting it is similiar to how we write README
 st.markdown('Uses streamlit to display dashboard and user dataset obtained from Kaggle')
+st.markdown('#### Made by __Saumya Bhatt__')
 
 #can easily make sidebar in streamlit
 st.sidebar.title('Sentiment analysis of US airlines by tweets')
@@ -16,7 +17,7 @@ st.sidebar.markdown('Uses streamlit to display dashboard and user dataset obtain
 st.cache(persist = True)
 
 #data url is defined seperately so that later if the data is on cloud, #can directly past the link here. It is stored as a tupple here
-DATA_URL = ("C:/Users/Saumya/Desktop/Saumya/WebDev/Python/Streamlit/Tweets.csv")
+DATA_URL = ("Tweets.csv")
 def load_data():
     data = pd.read_csv(DATA_URL)
         #loading the data of column tweet_created onto a pandas format datetime
